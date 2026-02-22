@@ -30,4 +30,5 @@ CLOUDINARY_STORAGE = {
     "API_KEY": os.getenv("CLOUDINARY_API_KEY"),
     "API_SECRET": os.getenv("CLOUDINARY_API_SECRET"),
 }
+## Used for production, to allow CSRF from our deployed frontend URL-admin page forbidden error
 CSRF_TRUSTED_ORIGINS = ["https://web-production-6a1fe5.up.railway.app"]
