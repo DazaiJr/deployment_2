@@ -12,3 +12,4 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+NPM_BIN_PATH = r"C:\nvm4w\nodejs\npm.cmd" 
