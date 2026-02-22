@@ -1,20 +1,19 @@
 from .base import *
 import os
+import dj_database_url
 
 DEBUG = False
 
 ALLOWED_HOSTS = ["*"]  # temporary, we’ll tighten later
  
 # Production Database (PostgreSQL)
+# ✅ Railway PostgreSQL (via DATABASE_URL)
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'daillyfresh_db',
-        'USER': 'db_user',
-        'PASSWORD': 'db_password',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    "default": dj_database_url.config(
+        default=os.getenv("DATABASE_URL"),
+        conn_max_age=600,
+        ssl_require=True,
+    )
 }
 
 INSTALLED_APPS += [
