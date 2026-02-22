@@ -30,4 +30,4 @@ CLOUDINARY_STORAGE = {
     "API_KEY": os.getenv("CLOUDINARY_API_KEY"),
     "API_SECRET": os.getenv("CLOUDINARY_API_SECRET"),
 }
-CSRF_TRUSTED_ORIGINS=https://web-production-6a1fe5.up.railway.app
+CSRF_TRUSTED_ORIGINS = ["https://web-production-6a1fe5.up.railway.app"]
