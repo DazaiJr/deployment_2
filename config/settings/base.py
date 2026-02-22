@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
 # Security Key (Production mein ye .env file se aani chahiye)
-SECRET_KEY = 'django-insecure-CHANGE_ME_IN_PRODUCTION'
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # Application definition
 INSTALLED_APPS = [

@@ -5,6 +5,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+SECRET_KEY = os.getenv(
+    "SECRET_KEY",
+    "local-dev-secret-key-change-me"
+)
 # Development Database (SQLite)
 DATABASES = {
     'default': {
